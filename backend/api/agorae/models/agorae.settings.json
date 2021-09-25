@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "agoraes",
+  "info": {
+    "name": "Agorae",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inscription": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.section"
+    },
+    "inscriptionFile": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.inscription-file"
+    },
+    "horaires": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.section"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.seo"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/vie-sportive-du-campus",
+      "handler": "vie-sportive-du-campus.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/vie-sportive-du-campus",
+      "handler": "vie-sportive-du-campus.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/vie-sportive-du-campus",
+      "handler": "vie-sportive-du-campus.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

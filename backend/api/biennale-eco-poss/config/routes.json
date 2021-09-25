@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/biennale-eco-poss",
+      "handler": "biennale-eco-poss.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/biennale-eco-poss",
+      "handler": "biennale-eco-poss.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/biennale-eco-poss",
+      "handler": "biennale-eco-poss.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

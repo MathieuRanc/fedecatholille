@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_title_and_descriptions",
+  "info": {
+    "name": "Title & description",
+    "icon": "font"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

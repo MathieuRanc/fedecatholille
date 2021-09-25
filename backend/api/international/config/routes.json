@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/international",
+      "handler": "international.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/international",
+      "handler": "international.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/international",
+      "handler": "international.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

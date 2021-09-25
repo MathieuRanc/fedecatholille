@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/agorae",
+      "handler": "agorae.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/agorae",
+      "handler": "agorae.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/agorae",
+      "handler": "agorae.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

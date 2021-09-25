@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "internationals",
+  "info": {
+    "name": "International",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.section"
+    }
+  }
+}

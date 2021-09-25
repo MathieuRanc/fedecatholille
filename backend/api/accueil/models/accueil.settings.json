@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "accueils",
+  "info": {
+    "name": "Accueil",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.seo"
+    }
+  }
+}

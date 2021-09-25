@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_general_seos",
+  "info": {
+    "name": "Seo",
+    "icon": "chart-line",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescripton": {
+      "type": "text"
+    },
+    "shareImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

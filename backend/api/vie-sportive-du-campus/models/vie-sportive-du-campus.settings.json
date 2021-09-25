@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "vie_sportive_du_campuses",
+  "info": {
+    "name": "Vie sportive du Campus",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.section"
+    }
+  }
+}

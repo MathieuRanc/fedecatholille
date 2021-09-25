@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "biennale_eco_posses",
+  "info": {
+    "name": "Biennale EcoPoss",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "text"
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.section"
+    }
+  }
+}
