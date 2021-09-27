@@ -1,5 +1,4 @@
----
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cp6748/repositories/fedecatholille/
-    - /bin/cp -R * $DEPLOYPATH
+    - export DEPLOYPATH=/home/cp6748/repositories/fedecatholille/dist
+    - /bin/cp -R /frontend/ $DEPLOYPATH
