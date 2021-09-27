@@ -21,9 +21,9 @@ export default {
       )
     },
   },
-  mounted() {
-    this.$fetch()
-  },
+  // mounted() {
+  //   this.$fetch()
+  // },
   async fetch() {
     const partenaires = await fetch(
       process.env.urlAPI + '/partenaires?per_page=100'

@@ -197,9 +197,9 @@ export default {
       return associations
     },
   },
-  mounted() {
-    this.$fetch()
-  },
+  // mounted() {
+  //   this.$fetch()
+  // },
   async fetch() {
     const associations = await fetch(
       process.env.urlAPI + '/associations?per_page=100'

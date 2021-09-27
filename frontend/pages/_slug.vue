@@ -15,9 +15,9 @@ export default {
       return state.pages.find((page) => page.slug === this.$route.params.slug)
     },
   }),
-  mounted() {
-    this.$fetch()
-  },
+  // mounted() {
+  //   this.$fetch()
+  // },
   async fetch() {
     const pages = await fetch(
       process.env.urlPages + '/pages?per_page=100'

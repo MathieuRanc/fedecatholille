@@ -40,9 +40,9 @@ export default {
       }
     },
   },
-  mounted() {
-    this.$fetch()
-  },
+  // mounted() {
+  //   this.$fetch()
+  // },
   async fetch() {
     const events = await fetch(
       process.env.urlAPI + '/events?per_page=100'

@@ -9,123 +9,39 @@
     <input v-model="burger" type="checkbox" name="burger" id="burger" />
     <div class="menu-burger">
       <label for="burger">×</label>
-      <span>Fédé Lille</span>
-      <NuxtLink to="/la-fede">Qui sommes nous ?</NuxtLink>
-      <NuxtLink to="/la-fede#notre-equipe">Notre équipe</NuxtLink>
-      <NuxtLink to="/notre-histoire">Notre histoire</NuxtLink>
-      <NuxtLink to="/nos-partenaires">Nos partenaires</NuxtLink>
-      <span>Vie étudiante</span>
-      <NuxtLink to="/annuaire">Nos associations</NuxtLink>
-      <NuxtLink to="/inscrire-son-asso">Inscrire son Asso</NuxtLink>
-      <NuxtLink to="/actualites">Actualités</NuxtLink>
-      <NuxtLink to="/donnez-votre-avis"
-        >Donnez votre Avis</NuxtLink
-      >
-      <NuxtLink to="/vie-sportive-du-campus">Vie Sportive du campus</NuxtLink>
-      <!-- <NuxtLink to="/biennale-ecoposs">Biennale EcoPoss</NuxtLink> -->
-      <NuxtLink to="/international">International</NuxtLink>
-      <span>Nos events</span>
-      <NuxtLink to="/events">Nos events</NuxtLink>
-      <!-- <NuxtLink to="/billetterie">Billetterie</NuxtLink> -->
-      <span>Agoraé</span>
-      <NuxtLink class="green" to="/agorae">C'est quoi l'Agoraé ?</NuxtLink>
-      <NuxtLink class="green" to="/agorae#inscription"
-        >Comment s'inscrire ?</NuxtLink
-      >
-      <NuxtLink class="green" to="/agorae#horaires">Nos horaires</NuxtLink>
-      <NuxtLink class="green" to="/agorae#partenaires"
-        >Nos partenaires</NuxtLink
-      >
-      <NuxtLink to="/contact" tag="button">Contact</NuxtLink>
+      <div v-for="item in menu" :key="item.id" class="section_menu">
+        <span>
+          {{ item.title }}
+        </span>
+        <div v-if="item.childs && item.childs.length > 0">
+          <NuxtLink
+            v-for="sub_menu in item.childs"
+            :key="sub_menu.id"
+            :to="sub_menu.url"
+            >{{ sub_menu.title }}</NuxtLink
+          >
+        </div>
+        <NuxtLink v-else to="/events">{{ item.title }}</NuxtLink>
+      </div>
     </div>
     <ul class="menu desktop">
-      <li>
-        <label for="">Fédé Lille</label>
-        <img src="../assets/chevron-down.svg" alt="chevron" />
-        <ul class="sub-menu">
-          <li>
-            <NuxtLink to="/la-fede">Qui sommes nous ?</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/la-fede#notre-equipe">Notre équipe</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/notre-histoire">Notre histoire</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/nos-partenaires">Nos partenaires</NuxtLink>
+      <li v-for="item in menu" :key="item.id" class="section_menu">
+        <label v-if="item.childs && item.childs.length > 0" for="">{{
+          item.title
+        }}</label>
+        <img
+          v-if="item.childs && item.childs.length > 0"
+          src="../assets/chevron-down.svg"
+          alt="chevron"
+        />
+        <ul v-if="item.childs && item.childs.length > 0" class="sub-menu">
+          <li v-for="sub_menu in item.childs" :key="sub_menu.id">
+            <NuxtLink :to="sub_menu.url">{{ sub_menu.title }}</NuxtLink>
           </li>
         </ul>
-      </li>
-      <li>
-        <label for="">Vie étudiante</label>
-        <img src="../assets/chevron-down.svg" alt="chevron" />
-        <ul class="sub-menu">
-          <li>
-            <NuxtLink to="/annuaire">Nos associations</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/inscrire-son-asso">Inscrire son Asso</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/actualites">Actualités</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/donnez-votre-avis"
-              >Donnez votre Avis</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink to="/vie-sportive-du-campus"
-              >Vie Sportive du campus</NuxtLink
-            >
-          </li>
-          <!-- <li>
-						<NuxtLink to="/biennale-ecoposs"
-							>Biennale EcoPoss</NuxtLink
-						>
-					</li> -->
-          <li>
-            <NuxtLink to="/international">International</NuxtLink>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <NuxtLink tag="label" class="pointer" to="/events">Nos events</NuxtLink>
-        <!-- <label for="">Nos events</label>
-				<img src="../assets/chevron-down.svg" alt="chevron" />
-				<ul class="sub-menu">
-					<li><NuxtLink to="/events">Nos events</NuxtLink></li>
-					<li>
-						<NuxtLink to="/billetterie">Billetterie</NuxtLink>
-					</li>
-				</ul> -->
-      </li>
-      <li>
-        <label for="">Agoraé</label>
-        <img src="../assets/chevron-down.svg" alt="chevron" />
-        <ul class="sub-menu">
-          <li>
-            <NuxtLink class="green" to="/agorae"
-              >C'est quoi l'Agoraé ?</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink class="green" to="/agorae#inscription"
-              >Comment s'inscrire ?</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink class="green" to="/agorae#horaires"
-              >Nos horaires</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink class="green" to="/agorae#partenaires"
-              >Nos partenaires</NuxtLink
-            >
-          </li>
-        </ul>
+        <NuxtLink v-else tag="label" class="pointer" to="/events"
+          >Nos events</NuxtLink
+        >
       </li>
     </ul>
     <NuxtLink to="/contact" tag="button" class="desktop">Contact</NuxtLink>
@@ -137,12 +53,42 @@ export default {
   data() {
     return {
       burger: false,
+      menu: [],
     }
   },
   watch: {
     $route() {
       this.burger = false
     },
+  },
+  async fetch() {
+    this.menu = (
+      await fetch(process.env.urlPages + '/menu').then((res) => res.json())
+    ).map((item) => {
+      return {
+        id: item.ID,
+        url: item.url,
+        title: item.title,
+        parent: parseInt(item.menu_item_parent),
+      }
+    })
+    this.menu = this.menu
+      .filter((item) => item.parent === 0)
+      .map((item) => {
+        return {
+          id: item.id,
+          title: item.title,
+          childs: this.menu
+            .filter((sub_menu) => sub_menu.parent === item.id)
+            .map((sub_menu) => {
+              return {
+                id: sub_menu.id,
+                url: sub_menu.url,
+                title: sub_menu.title,
+              }
+            }),
+        }
+      })
   },
 }
 </script>
@@ -204,6 +150,10 @@ label[for='burger'] {
   button {
     margin: 10px auto 20px auto;
     padding: 16px 44px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
   }
 }
 input[type='checkbox'] {
@@ -316,9 +266,11 @@ nav {
   background-color: var(--main);
   color: white;
 }
-.sub-menu li:hover a.green,
-.green.nuxt-link-exact-active:not(.link-logo) {
-  background-color: var(--agorae);
+.section_menu:last-child {
+  li:hover a,
+  .nuxt-link-exact-active:not(.link-logo) {
+    background-color: var(--agorae);
+  }
 }
 
 .mobile {
