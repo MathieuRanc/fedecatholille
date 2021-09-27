@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cp6748/repositories/dist
-    - /bin/cp -R frontend $DEPLOYPATH
+    - export DEPLOYPATH=/home/cp6748/repositories/fedecatholille
+    - /bin/cp -R * $DEPLOYPATH
 # comment 
