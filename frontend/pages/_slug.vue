@@ -12,7 +12,7 @@ export default {
   },
   computed: mapState({
     page(state) {
-      return state.pages.find((page) => page.slug === this.$route.params.slug) 
+      return state.pages.find((page) => page.slug === this.$route.params.slug)
     },
   }),
   // mounted() {
