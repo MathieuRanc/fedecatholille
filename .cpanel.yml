@@ -1,4 +1,5 @@
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/cp6748/repositories/dist
-    - /bin/cp -R /frontend/ $DEPLOYPATH
+    - /bin/cp -R frontend $DEPLOYPATH
