@@ -206,9 +206,9 @@ export default {
       reader.readAsDataURL(file)
     },
   },
-  // mounted() {
-  //   this.$fetch()
-  // },
+   beforeMount() {
+     this.$fetch()
+   },fetchOnServer: false,
   async fetch() {
     const pages = await fetch(
       process.env.urlPages + '/pages?per_page=100'

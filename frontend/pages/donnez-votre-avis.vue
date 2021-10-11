@@ -17,9 +17,9 @@ export default {
   head: {
     title: 'Donnez votre avis',
   },
-  // mounted() {
-  //   this.$fetch()
-  // },
+   beforeMount() {
+     this.$fetch()
+   },fetchOnServer: false,
   async fetch() {
     const representationEtudiante = await fetch(
       process.env.urlAPI + '/rep_etudiante?per_page=100'

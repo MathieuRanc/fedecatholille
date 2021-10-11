@@ -18,9 +18,9 @@ export default {
       title: 'Nos partenaires',
     }
   },
-  // mounted() {
-  //   this.$fetch()
-  // },
+   beforeMount() {
+     this.$fetch()
+   },fetchOnServer: false,
   async fetch() {
     const partenaires = await fetch(
       process.env.urlAPI + '/partenaires?per_page=100'

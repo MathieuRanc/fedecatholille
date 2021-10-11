@@ -33,9 +33,9 @@ export default {
       return [debut, fin]
     },
   },
-  // mounted() {
-  //   this.$fetch()
-  // },
+   beforeMount() {
+     this.$fetch()
+   },fetchOnServer: false,
   async fetch() {
     const articles = await fetch(
       process.env.urlAPI + '/actualites?per_page=100'
