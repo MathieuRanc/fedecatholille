@@ -39,9 +39,10 @@ export default {
       }
     },
   },
-   beforeMount() {
-     this.$fetch()
-   },fetchOnServer: false,
+  beforeMount() {
+    this.$fetch()
+  },
+  fetchOnServer: false,
   async fetch() {
     const articles = await fetch(
       process.env.urlAPI + '/actualites?per_page=100'
@@ -61,6 +62,9 @@ h2 {
 }
 button {
   margin: 20px auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .galerie {
   margin: 40px auto 0 auto;

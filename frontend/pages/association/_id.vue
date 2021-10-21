@@ -11,19 +11,23 @@
 export default {
   head() {
     return {
-      title: this.association.acf.nom,
+      title: this.title,
     }
   },
   computed: {
+    title() {
+      this.association ? this.association.acf.title : ''
+    },
     association() {
       return this.$store.state.associations.find(
         (association) => association.id === parseInt(this.$route.params.id)
       )
     },
   },
-   beforeMount() {
-     this.$fetch()
-   },fetchOnServer: false,
+  beforeMount() {
+    this.$fetch()
+  },
+  fetchOnServer: false,
   async fetch() {
     const associations = await fetch(
       process.env.urlAPI + '/associations?per_page=100'
@@ -44,10 +48,10 @@ export default {
     margin-left: 40px;
     margin-bottom: 30px;
     max-height: 500px;
-    min-width: 66%;
+    // min-width: 66%;
     max-width: 400px;
-    -webkit-filter: drop-shadow(-4px 4px 10px rgba(0, 0, 0, 0.25));
-    filter: drop-shadow(-4px 4px 10px rgba(0, 0, 0, 0.25));
+    // -webkit-filter: drop-shadow(-4px 4px 10px rgba(0, 0, 0, 0.25));
+    // filter: drop-shadow(-4px 4px 10px rgba(0, 0, 0, 0.25));
     border-radius: 4px;
     object-fit: contain;
     @media screen and (max-width: 750px) {

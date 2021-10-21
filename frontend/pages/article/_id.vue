@@ -59,7 +59,7 @@ export default {
     margin-left: 40px;
     margin-bottom: 30px;
     max-height: 500px;
-    min-width: 66%;
+    // min-width: 66%;
     max-width: 400px;
     -webkit-filter: drop-shadow(-4px 4px 10px rgba(0, 0, 0, 0.25));
     filter: drop-shadow(-4px 4px 10px rgba(0, 0, 0, 0.25));

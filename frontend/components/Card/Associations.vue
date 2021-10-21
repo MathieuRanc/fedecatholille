@@ -36,8 +36,8 @@ img {
 	object-fit: contain;
 	width: 100%;
 	aspect-ratio: 1/1;
-	-webkit-filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.2));
-	filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.2));
+	// -webkit-filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.2));
+	// filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.2));
 	// height: calc(100vw / 5 - 260px);
 	// @media screen and (max-width: 2000px) {
 	// 	height: calc(100vw / 5 - 200px);
